@@ -1,0 +1,193 @@
+{% extends "components/header.html" %}
+
+{% block content %}
+
+  <main>
+    <div class='frame-card filter'>
+      <div class='section'>
+        <div class='block shadow'></div>
+        <div class='block glow'></div>
+        <div class='block scanlines'></div>
+  
+        <div class='container'>
+          <ul>
+            <li><a href='status' data-toggle='tab'>Status</a></li>
+            <li class='active-menu'><a href='rules' data-toggle='tab'>Rules</a></li>
+            <li><a href='editor' data-toggle='tab'>Editor</a></li>
+            <li><a href='comm' data-toggle='tab'>Comm.</a></li>
+          </ul>
+
+          <div class='tab-content'>
+            <article class='pane' id='status'>
+              <div class='full-center'>
+                TODO ...
+              </div>
+            </article>
+
+            <article class='pane visible' id='rules'>
+              <header class='center upper'>
+                <h2>The artist's rules</h2>
+              </header>
+              <div class='separator'></div>
+              <div class='rules'>
+                
+                <input type="radio" name="lang" id="lang-fr" checked="true" />
+                <label for="lang-fr">Français</label>
+                
+                <input type="radio" name="lang" id="lang-en" />
+                <label for="lang-en">English</label>
+                <article class="rules-article fr">
+                  <h2>Déroulement</h2>
+                  <p>Depuis la guerre, une crise économique a émergé. Voyant que les NFT étaient voués à l'échec (#woke), vous avez décidé de vous tourner vers une technologie ancestrale oubliée : le web ! Armé de votre expertise en tant qu'architecte front-end, vous envisagez de faire fortune en répliquant d'anciennes œuvres d'art pour ensuite les revendre dans un format numérique.</p>
+                  <p>Mercenaires dans l'âme, soyez vigilants ! ChlorophyllAI surveille toute transaction infonuagique et numérique. Il vous sera donc impossible de reproduire une œuvre pendant plus de 35 minutes.</p>
+                  <p>Ainsi, à chaque manche, vous disposerez de 35 minutes pour copier l'œuvre aussi fidèlement que possible, après quoi vous devrez passer à la suivante.</p>
+                  <p>Lors de votre prestation artistique, vous ne serez malheureusement pas totalement libres de vos actions. ChlorophyllAI aurait trop de facilité à repérer votre talent ! Pour contrer cela, vous devrez diviser le travail. Après un consensus, une personne se chargera du HTML tandis que l'autre s'occupera du CSS. Afin de ne pas épuiser les participants, ces rôles seront échangés à chaque nouvelle œuvre.</p>
+                  <p>De temps en temps, il est important que les deux artistes synchronisent leur travail pour pouvoir construire l'œuvre.</p>
+                  <p>/!\ Prenez garde ! La contrefaçon est un acte illégal, il faudra donc être discrète et discret. Lorsque l'on synchronise son code avec son complice, il peut arriver qu'une oreille indiscrète intercepte les communications. Il est donc possible que, lors de la synchronisation, tout le monde puisse entrevoir les informations transmises à votre complice.</p>
+                  <p>Après chaque manche, une petite pause sera accordée aux artistes, leur permettant de revoir leur processus de création.</p>
+                
+                  <h2>Contraintes</h2>
+                  <h3>Artistes en général</h3>
+                  <p>Par la nature de votre mission, vous devez rester discrètes et discrets vis-à-vis d’une intelligence artificielle suprême. Vous ne pourrez donc pas compter sur les internets ou sur des logiciels surpuissants. Vous devrez travailler à la sueur de votre front avec un vieil éditeur conçu spécialement pour ne pas se faire repérer par l’intelligence artificielle.</p>
+                  <p>Si jamais cette dernière vous remarque dû à l’utilisation des internets ou d’un logiciel tiers, il ne sera plus possible de devenir la meilleure équipe d’artistes, votre score global tombera à zéro. Privilégier les communications à voix haute, les ordinateurs d’époque que l’on vous fourni ne peuvent pas être contrôler par la menace, il sera donc possible de parler sans crainte de se faire surprendre par l’intelligence supérieure. N’utilisez pas votre cellulaire, la l’intelligence artificielle vous expulsera directement de la compétition immédiatement.</p>
+                  
+                  <h3>Artiste du HTML</h3>
+                  <p>Voici les restrictions concernant les balises et attributs que vous devrez respecter. Si votre processus créatif vous amène à utiliser ces éléments, ils ne seront pas pris en compte par la plateforme de contrefaçon.</p>
+                  <span>Balises interdites: [script, iframe, link, img, style, embed, object, svg]</span>
+                  <span>Attributs interdits: [style, background, src, href]</span>
+                
+                  <h3>Artiste du CSS</h3>
+                  <p>Voici les restrictions concernant le style de l'œuvre que vous devrez respecter. Si votre processus créatif vous amène à utiliser ces éléments, ils ne seront pas pris en compte par la plateforme de création de contrefaçon.</p>
+                  <span>Éléments interdits: [@import, url(...), expression(...)]</span>
+                  <span>L'injection de balise html sera aussi retirée.</span>
+                
+                  <h2>Synchronisation</h2>
+                  <p>À chaque synchronisation, le serveur gardera une empreinte de votre code. La dernière empreinte de chaque artiste sera utilisée pour concevoir l'œuvre finale. Il est donc de votre responsabilité en tant qu'artiste de veiller à ce que votre dernière synchronisation soit réussie.</p>
+                
+                  <h2>Fuite de données</h2>
+                  <p>À chaque synchronisation, il y a une chance sur dix que la section demandée pour la synchronisation soit divulguée aux autres artistes sur la plateforme.</p>
+                
+                  <h2>Pointage</h2>
+                  <p>Lors de chaque manche, un score sur 1000 points vous sera attribué en fonction de la similarité entre votre œuvre et l'original. En cas d'égalité, la longueur du code sera prise en compte.</p>
+                  <p>Un classement sera alors créé pour la manche qui vient de se terminer pour déterminer quelle œuvre sera la plus à même de copier l’originale. La première place recevra 22 points tandis que la dernière équipe recevra 0 point. Les équipes d’artistes entre les deux bornes recevrons un nombre de points selon leur score par rapport à ces deux extrêmes.</p>
+                  <span>Formule pour vos points d’une manche: (x - y) / (w - y) * 22 pour </span>
+                  <span>x: votre score de ressemblance, </span>
+                  <span>y: le minimum des scores de ressemblance obtenu par l’ensemble des équipes, </span>
+                  <span>w: le maximum des scores de ressemblance obtenu par l’ensemble des équipes</span>
+                  <p>Le pointage global sera une sommation des pointages de chaque manche.</p>
+                  <p>Si une égalité survient, la longueur du code sera déterministe pour départager les deux équipes.</p>
+                
+                  <h2>Interface</h2>
+                  <img src="{{ url_for('static', filename='editor.png') }}" alt='editor' style="margin-left: auto; margin-right: auto; display: block; width: 80%; max-width: 800px; min-width: 600px; filter: contrast(0.7);" />
+                  <ul class="list">
+                    <li>1. Affiche votre rôle (HTML - CSS)</li>
+                    <li>2. Le temps restant pour créer votre contrefaçon</li>
+                    <li>3. L'éditeur de texte</li>
+                    <li>4. L'état de votre réplique comment la plateforme l'interprète<br/>&nbsp;&nbsp;/!\ Lorsque l'on clique sur notre réplique, cela montre une vague idée des différentre entre la réplique et l'original.</li>
+                    <li>5. L'oeuvre de référence<br/>&nbsp;&nbsp;/!\ Lorsque l'on passe le curseur sur l'image, un inspecteur de couleurs apparaît pour connaître le code de la couleur.</li>
+                  </ul>
+                </article>
+                <article class="rules-article en">
+                  <h2>Process</h2>
+                  <p>Since the war, an economic crisis has emerged. Seeing that NFTs were doomed to fail (#woke), you decided to turn to an ancient, forgotten technology: the web! Armed with your expertise as a front-end architect, you plan to make a fortune by replicating ancient artworks and then reselling them in a digital format.</p>
+                  <p>Mercenaries at heart, be vigilant! ChlorophyllAI monitors all cloud and digital transactions. Therefore, it will be impossible for you to replicate a work for more than 35 minutes.</p>
+                  <p>Thus, in each round, you will have 35 minutes to copy the work as faithfully as possible, after which you must move on to the next one.</p>
+                  <p>During your artistic performance, you will unfortunately not be completely free to act as you wish. ChlorophyllAI would find it too easy to spot your talent! To counter this, you will need to divide the work. After a consensus, one person will take care of the HTML while the other will handle the CSS. To avoid exhausting the participants, these roles will be exchanged with each new artwork.</p>
+                  <p>From time to time, it is important for the two artists to synchronize their work to be able to construct the artwork.</p>
+                  <p>/!\ Beware! Counterfeiting is an illegal act, so you will need to be discreet. When synchronizing your code with your accomplice, it might happen that an eavesdropper intercepts the communications. Therefore, during synchronization, it is possible that everyone might catch a glimpse of the information transmitted to your accomplice.</p>
+                  <p>After each round, a short break will be granted to the artists, allowing them to review their creative process.</p>
+                
+                  <h2>Constraints</h2>
+                  <h3>Artists in General</h3>
+                  <p>Due to the nature of your mission, you must remain discreet in the face of a supreme artificial intelligence. Therefore, you cannot rely on the internets or on powerful software. You will have to work hard using an old editor specially designed not to be detected by artificial intelligence.</p>
+                  <p>If the latter notices you due to the use of the internets or a third-party software, it will no longer be possible to become the best team of artists; your overall score will drop to zero. Favor high-voice communications, the old computers provided to you cannot be controlled by the threat, so it will be possible to speak without fear of being caught by the superior intelligence.</p>
+                
+                  <h3>HTML Artist</h3>
+                  <p>Here are the restrictions regarding the tags and attributes you must adhere to. If your creative process leads you to use these elements, they will not be considered by the counterfeiting platform.</p>
+                  <span>Forbidden tags: [script, iframe, link, img, style, embed, object, svg]</span>
+                  <span>Forbidden attributes: [style, background, src, href]</span>
+                
+                  <h3>CSS Artist</h3>
+                  <p>Here are the restrictions regarding the style of the work that you must adhere to. If your creative process leads you to use these elements, they will not be considered by the counterfeiting platform.</p>
+                  <span>Forbidden elements: [@import, url(...), expression(...)]</span>
+                  <span>HTML tag injection will also be removed.</span>
+                
+                  <h2>Synchronisation</h2>
+                  <p>With each synchronization, the server will keep a footprint of your code. The last footprint of each artist will be used to design the final work. It is therefore your responsibility as an artist to ensure that your last synchronization is successful.</p>
+                
+                  <h2>Data Leak</h2>
+                  <p>With each synchronization, there is a one in ten chance that the section requested for synchronization will be disclosed to the other artists on the platform.</p>
+                
+                  <h2>Scoring</h2>
+                  <p>In each round, you will be awarded a score out of 1000 points based on the similarity between your work and the original. In the event of a tie, the length of the code will be taken into account.</p>
+                  <p>A ranking will then be created for the round that has just ended to determine which work is most likely to copy the original. The first place will receive 22 points while the last team will receive 0 points. The artist teams between these two extremes will receive a number of points according to their score relative to these two extremes.</p>
+                  <span>Formula for your points from a round: (x - y) / (w - y) * 22 where</span>
+                  <span>x: your similarity score,</span>
+                  <span>y: the minimum similarity score obtained by all the teams,</span>
+                  <span>w: the maximum similarity score obtained by all the teams.</span>
+                  <p>The overall score will be a sum of the scores from each round.</p>
+                  <p>If a tie occurs, the length of the code will be deterministic to differentiate the two teams.</p>
+                
+                  <h2>Interface</h2>
+                
+                  <img src="{{ url_for('static', filename='editor.png') }}" alt='editor' style="margin-left: auto; margin-right: auto; display: block; width: 80%; max-width: 800px; min-width: 600px; filter: contrast(0.7);" />
+                  <ul class="list">
+                    <li>1. Displays your role (HTML - CSS)</li>
+                    <li>2. The time remaining to create your counterfeit</li>
+                    <li>3. The text editor</li>
+                    <li>4. The state of your replica as the platform interprets it<br/>&nbsp;&nbsp;/!\ When you click on your replica, it shows a vague idea of the differences between the replica and the original.</li>
+                    <li>5. The reference work<br/>&nbsp;&nbsp;/!\ When you hover over the image, a color inspector appears to know the color code.</li>
+                </article>
+                
+              </div>
+            </article>
+
+            <article class='pane' id='editor'>
+              <header class='space-between'>
+                <h3>role: <span class='title-role' data-role='{{ role }}'>????</span></h3>
+                <span id='time-remaining' data-end='{{ time_left }}'>??:??</span>
+              </header>
+              <div class='separator'></div>
+              <div class='pane-body'>
+                <textarea id='text-editor' spellcheck='false'></textarea>
+              </div>
+            </article>
+
+            <article class='pane' id='comm'>
+              <ul id='leaks'></ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section style='display: flex; position: relative;'>
+      <div class='container filter absolute-full'>
+        <div class='block shadow'></div>
+      </div>
+      <div class='space-around-col'>
+        <div class='img-container' id='replica'>
+          <h3 class='center filter img-title'>replica</h3>
+          <div>
+            <img id='ref-img' style='display: none;' crossorigin='anonymous' src="{{ 'data:image/png;base64,' + current_round[1].to_dict()["image"] if current_round else '' }}" />
+            <iframe id='img-replicat'></iframe>
+          </div>
+        </div>
+
+        <button id='sync' style='z-index: 10' class='btn filter shadow'>sync</button>
+
+        <div class='img-container'>
+          <h3 class='center filter img-title'>reference</h3>
+          <div>
+            <canvas id='canvas-ref'></canvas>
+            <canvas id='magnifier'></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id='toast-notif'>copied !</div>
+  </main>
+
+  <script src="{{ url_for('static', filename='socket.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

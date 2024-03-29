@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  server:
+    build: .
+    ports:
+      - "8943:5000"
+    environment:
+      - MONGO_DBNAME=chlorophyll_ia_css_battle
+      - MONGO_HOST=mongo_db
+      - MONGO_PORT=27017
+    depends_on:
+      - mongo_db
+    volumes:
+      - ./app/templates:/app/templates
+      - ./app/static:/app/static
+
+  mongo_db:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db

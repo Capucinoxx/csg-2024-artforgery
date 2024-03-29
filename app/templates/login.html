@@ -1,0 +1,23 @@
+{% extends "components/header.html" %}
+
+{% block content %}
+<div class='full-center h-100'>
+  <section class='section-card filter form-section'>
+    <div class='block shadow'></div>
+    <div class='block glow'></div>
+    <div class='block scanlines'></div>
+
+  <h1>ART FORGERY</h1>
+
+  <form action="/login" method="POST" class='form'>
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="submit" value="Login">
+  </form>
+  </section>
+  
+</div>
+
+{% endblock %}
+
+</html>
